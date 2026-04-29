@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Meeting - 29 April 2026 | Zebra Jukebox</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="sr-announce" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">ZEBRA JUKEBOX</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#agreement">Agreement</a></li>
+        <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+        <li class="nav-item"><a class="nav-link" href="#insights">Insights</a></li>
+        <li class="nav-item"><a class="nav-link" href="#transcript">Transcript</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- Header -->
+  <section class="hero" aria-labelledby="meeting-heading">
+    <div class="container">
+      <p class="mb-2"><a href="index.html" class="text-white-50">&larr; Back to home</a></p>
+      <h1 id="meeting-heading"><span aria-hidden="true">&#128221;</span> House Meeting</h1>
+      <p class="lead mb-1">29 April 2026, 6:30 pm - Perth</p>
+      <p class="mb-0">Present: Tim, D'Arcy, Nessa (via Auslan interpreter Anna)</p>
+    </div>
+  </section>
+
+  <!-- AGREEMENT (main feature) -->
+  <section id="agreement" aria-labelledby="agreement-heading">
+    <div class="container">
+      <h2 id="agreement-heading"><span aria-hidden="true">&#9993;&#65039;</span> The Agreement</h2>
+      <p>The 14 things we agreed to live by, until we revisit at the next meeting.</p>
+
+      <div id="agreement-printable" class="card border-2">
+        <div class="card-body p-4">
+          <header class="text-center mb-4">
+            <h3 class="mb-1">Zebra Jukebox House Agreement</h3>
+            <p class="text-muted mb-0">29 April 2026</p>
+          </header>
+
+          <h4 class="h5"><span aria-hidden="true">&#128172;</span> Communication</h4>
+          <ol>
+            <li><strong>iMessage</strong> is for house matters only - bills, property, dogs, household stuff. One topic at a time.</li>
+            <li><strong>Messenger</strong> is for casual banter, jokes, Scrabble, life chat.</li>
+            <li><strong>Emojis are required</strong> in house chat to indicate tone. Nessa cannot read body language or facial expressions; emojis tell her if a message is serious, joking, or sarcastic.</li>
+            <li><strong>24-hour cool-off rule</strong> when emotionally charged - but preface it ("I need 24 hours" / "I need space"). Silence without warning gets misread.</li>
+            <li>If a chat is unreadable (broken keyboard, no interpreter), <strong>do not voice-dictate a flood of messages</strong> the others can't follow up on.</li>
+          </ol>
+
+          <h4 class="h5 mt-4"><span aria-hidden="true">&#129529;</span> Cleaning &amp; Home</h4>
+          <ol start="6">
+            <li>Cleaning is split <strong>by ability, not by day</strong>. Nessa washes and dries dishes, puts away, does her own laundry. The others handle vacuuming and anything that needs eyesight.</li>
+            <li>Tim will <strong>research a fortnightly professional cleaner</strong>, split three ways.</li>
+            <li><strong>Google Home camera</strong> set up before any cleaner visits - past theft has made trust hard.</li>
+            <li>Lock doors. Block the cellar opening behind the red couch. Report the next-door bull mastiff to the council ranger if it lunges again.</li>
+          </ol>
+
+          <h4 class="h5 mt-4"><span aria-hidden="true">&#128197;</span> Meetings &amp; Tools</h4>
+          <ol start="10">
+            <li><strong>Weekly house meetings on Tuesdays at 6:30 pm</strong> with an Auslan interpreter booked. Cancel with at least 2 days' notice or Nessa loses funding.</li>
+            <li>First meeting after this one: <strong>Tuesday 19 May 2026</strong> (Nessa back from Bali on 12 May).</li>
+            <li>Shared <strong>Google Calendar</strong> for house events, support workers, away dates.</li>
+            <li>Shared <strong>spreadsheet</strong> for rent, power, bills - on this Zebra Jukebox site, with Google Sheets as backup.</li>
+          </ol>
+
+          <h4 class="h5 mt-4"><span aria-hidden="true">&#127968;</span> Future</h4>
+          <ol start="14">
+            <li>Tim &amp; D'Arcy are aiming to move <strong>between June and August 2026</strong> for work. Nessa starts house-hunting once back from Bali, with full transparency on timing.</li>
+          </ol>
+
+          <hr class="my-4">
+
+          <h4 class="h5"><span aria-hidden="true">&#9997;&#65039;</span> Digital Signatures</h4>
+          <p class="text-muted small">Type your full name to sign. The date stamps automatically.</p>
+
+          <div class="row g-3 mt-2">
+            <div class="col-md-4">
+              <label for="sign-tim" class="form-label fw-bold">TIM</label>
+              <input type="text" class="form-control" id="sign-tim" placeholder="Type full name to sign">
+              <div id="sign-tim-date" class="signature-date small text-muted mt-1"></div>
+            </div>
+            <div class="col-md-4">
+              <label for="sign-darcy" class="form-label fw-bold">D'ARCY</label>
+              <input type="text" class="form-control" id="sign-darcy" placeholder="Type full name to sign">
+              <div id="sign-darcy-date" class="signature-date small text-muted mt-1"></div>
+            </div>
+            <div class="col-md-4">
+              <label for="sign-nessa" class="form-label fw-bold">NESSA</label>
+              <input type="text" class="form-control" id="sign-nessa" placeholder="Type full name to sign">
+              <div id="sign-nessa-date" class="signature-date small text-muted mt-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex gap-2 mt-3 flex-wrap">
+        <button class="btn btn-zj" onclick="saveSignatures()">
+          <span aria-hidden="true">&#128190;</span> Save signatures
+        </button>
+        <button class="btn btn-outline-zj" onclick="downloadAgreementPDF()">
+          <span aria-hidden="true">&#128229;</span> Download as PDF
+        </button>
+        <button class="btn btn-outline-secondary" onclick="window.print()">
+          <span aria-hidden="true">&#128424;&#65039;</span> Print
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section id="summary" aria-labelledby="summary-heading">
+    <div class="container">
+      <h2 id="summary-heading"><span aria-hidden="true">&#128209;</span> Summary</h2>
+      <div class="card">
+        <div class="card-body">
+          <p>The first formal house meeting for the Zebra Jukebox household. The trigger was a flare-up the night before - Nessa's keyboard broke mid-conversation, voice-to-text went sideways, and a stack of unanswered messages landed on Tim and D'Arcy at the same time. Everyone showed up wanting to repair, not just rehash.</p>
+          <p>The bulk of the conversation was about <strong>communication channels</strong> (separating house chat from banter, requiring emojis for tone, naming a cool-off period before retreating), <strong>cleaning</strong> (splitting tasks by ability rather than day, agreeing to research a professional cleaner), and <strong>cadence</strong> (weekly meetings on Tuesday with an interpreter, starting 19 May once Nessa is back from Bali).</p>
+          <p>Two pieces of new information surfaced: there is a <strong>cellar opening behind the red couch</strong> the previous tenant never fully closed, and D'Arcy's bag was stolen from his car the same day after a threatening student incident at his campus. Both reinforced the security thread already running through the conversation.</p>
+          <p>The meeting also re-set the medium-term plan: Tim and D'Arcy are looking at relocating for work between June and August 2026, and Nessa will start her own housing search once she's back. The group explicitly agreed that no one will be left "high and dry."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY INSIGHTS -->
+  <section id="insights" aria-labelledby="insights-heading">
+    <div class="container">
+      <h2 id="insights-heading"><span aria-hidden="true">&#128161;</span> Communication Style &amp; Hints</h2>
+      <p>Things that worked, and small adjustments that will probably help next time. Written as observations, not judgments.</p>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-success">
+            <div class="card-body">
+              <h3 class="h5 text-success"><span aria-hidden="true">&#9989;</span> What's working</h3>
+              <ul class="mb-0">
+                <li>You all sat through 2+ hours with an interpreter - that's a real commitment, not a token meeting.</li>
+                <li>Concrete agreements were reached on every topic raised. Nothing was left to "we'll see."</li>
+                <li>Humour is doing real work - the taco-Tuesday/toilet-Tuesday confusion, "awkward turtle," the bikini cheerleader joke - tension dropped every time someone laughed.</li>
+                <li>Nessa offered emojis as a literal accessibility need, and it was accepted instantly without it being made a big deal of.</li>
+                <li>D'Arcy named the retreat-vs-engage difference between his style and Nessa's. Naming it is most of the fix.</li>
+                <li>Nessa explicitly offered to plan around Tim &amp; D'Arcy's work timing, not the reverse. That's generous.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100 border-info">
+            <div class="card-body">
+              <h3 class="h5 text-info"><span aria-hidden="true">&#128161;</span> Small adjustments</h3>
+              <ul class="mb-0">
+                <li><strong>Tim</strong> often carries the systems / tech / "let me build a tool" load. That's a strength but it can also become "Tim solves it alone." Check in before adding to your own plate.</li>
+                <li><strong>D'Arcy</strong> tends to land somewhere useful but takes the long way. The others can resist the urge to finish his sentences - the wandering is part of the thinking.</li>
+                <li><strong>Nessa</strong> sometimes defaults to explaining what her disability prevents when challenged. Try framing requests as "let's try this together and see" - it gives her room to opt in rather than defend.</li>
+                <li>Watch the back-to-back-message pattern. When 4-5 unread messages stack up on the same topic, the original point gets buried. One message, then wait.</li>
+                <li>If voice-to-text or the keyboard isn't working, <strong>fall back to physical signals</strong> - hand gestures, charades, written notes. Tim has said he reads these well.</li>
+                <li>The 24-hour rule only works if it's named out loud. "I need space" before going quiet, every time.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-4 border-warning">
+        <div class="card-body">
+          <h3 class="h5 text-warning-emphasis"><span aria-hidden="true">&#128293;</span> Hot tip for next meeting</h3>
+          <p class="mb-0">The structure ChatGPT suggested (take turns, one topic at a time, park or resolve before moving on) actually held the room together. Keep it. Open the next meeting by re-stating those four ground rules out loud - it takes 30 seconds and re-anchors everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSCRIPT -->
+  <section id="transcript" aria-labelledby="transcript-heading">
+    <div class="container">
+      <h2 id="transcript-heading"><span aria-hidden="true">&#127908;</span> Transcript</h2>
+      <p>Edited for readability. Speaker labels: <strong>TIM</strong>, <strong>D'ARCY</strong>, <strong>NESSA*</strong> (* indicates spoken via Auslan interpreter Anna), <strong>ANNA</strong> (interpreter speaking for herself).</p>
+
+      <div class="accordion" id="transcriptAccordion">
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#topic1" aria-expanded="true" aria-controls="topic1">
+              <span aria-hidden="true">&#127919;</span>&nbsp; 1. Setting Expectations
+            </button>
+          </h3>
+          <div id="topic1" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p><span class="speaker speaker-tim">TIM:</span> Where to begin? I thought maybe setting expectations. Thanks, ChatGPT - I had it suggest some ground rules. We agree to take turns speaking, not interrupt each other. One topic at a time. Each topic gets parked or resolved before we move on. Everything stays respectful - the common goal is to get things resolved.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> D'Arcy, anything you want to add?</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> Not really. I just want to listen to you guys, actually.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I didn't really write anything down, so I don't feel very prepared. Maybe I'll add points later once we start talking.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> Just remember - we're coming into this separately too. With whatever we talk about at the end, we can write it down. Not like an HR summary, but we can all agree: this is what we're going to do. So if one of us is being an asshole during the week, we can say "hey, we agreed we wanted to be nice."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topic2" aria-expanded="false" aria-controls="topic2">
+              <span aria-hidden="true">&#128172;</span>&nbsp; 2. Communication Channels
+            </button>
+          </h3>
+          <div id="topic2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p><span class="speaker speaker-tim">TIM:</span> I'll start. One of my main things is the way we're communicating. We've got our text group message, but when we're trying to talk about anything regarding bills, property management, the dogs - I get a little lost in among all the random text chains. So it'd be handy to keep iMessage as the house-matters chain, and set up a separate Messenger group for the casual stuff.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> Yeah, the casual stuff - playing Scrabble together, making bad jokes, making good bad jokes.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> But also still being contextually alert and aware of our own boundaries. Being upfront - "hey, easy day, not fully in the mood, how's your day been." Knowing where the line is for ourselves so we don't step over it.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> That makes sense. I think that's the both of us as well.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> So iMessage for house stuff, one message at a time rule for that one. Messenger can be banter. And I had another thought - we all get reactive at times. What if we have a 24-hour cool-off, until the next house meeting if it can wait. So when we're engaging, unless it's life or death, we're not engaging while emotional.</p>
+              <p><span class="speaker speaker-anna">ANNA:</span> She's saying it sounds like we're running a business over here.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> It does feel like we're both in work mode. Sometimes living with housemates is a little bit like that too.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I think also, it might be helpful if we use emojis. That would help me a lot in understanding what the tone of the conversation is. I can't see body language, I can't see facial expressions. So it's completely impossible for me to understand if there's sarcasm or something behind a message. Could we try that?</p>
+              <p><span class="speaker speaker-tim">TIM:</span> It's a great suggestion. Definitely.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> Thank you so much.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topic3" aria-expanded="false" aria-controls="topic3">
+              <span aria-hidden="true">&#129529;</span>&nbsp; 3. Cleaning &amp; Responsibilities
+            </button>
+          </h3>
+          <div id="topic3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> For me - obviously, with my dog, and the pets - it's more about general tidiness. Animal hair exists on a constant level. Just maintaining things a bit more, the toys, what's not. It makes it easier for me to be on top of the animals around us.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> With the animals, it's hard - they will always shed, no matter how much we clean. I can definitely try my best to clean a little more and get some help. But the animals are like young, stupid children. They're so messy. It's a problem we're always going to have. I can't get rid of all of the hair.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> It's not about getting rid of, it's just a bit of extra upkeep. I lived with a cat before, it just shed everywhere. Just being aware of it, a bit more upkeep on things.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> Can I suggest a cleaning roster of sorts? With your support workers and the things you can do - getting an allocated amount of time each week to say "I've got 2 or 3 hours allocated for the support worker to do X, Y, Z." We can do a list.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> When my support workers are here I do always ask them. But I don't have them all the time - funding issues mean I only have support 3 days a week.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> I think the cleaner idea is actually a good one - I suggested it before we moved in. If we split three ways we're not constantly thinking about a schedule. I'm happy to do a shop-around. And I'd be happy to bring the Google Home out so when someone's in the house we can have that on.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I'm so happy to have a professional cleaner. But I have a lot of bad experiences with cleaners from when I lived by myself. People stole things from me - jewellery and stuff. So I get a little paranoid.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> I respect that. With security inside, you can put things on your mobile if you're really scared - put valuables in your room while they're cleaning.</p>
+              <p><span class="speaker speaker-anna">ANNA:</span> When you were talking about a roster - she's saying the difficult part isn't the cleaning task itself, it's more "who's going to do it? Have you done it? Has it been done?"</p>
+              <p><span class="speaker speaker-tim">TIM:</span> Yeah - who has done it. It's just not clear.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> While we're on cleaning - dishes and laundry. Laundry's fine, but dishes - is that something you can do? Just to gauge where we're being reasonable. Not saying it's a problem, more curiosity at this stage.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I normally do my own laundry. With the kitchen - I can do some. I've tried, but I miss things. I can only go by touch, so sometimes I've cleaned in the past and my support workers tell me I missed something on the dishes. I can do them, but I can't guarantee they'll be fully cleaned. I will still wash everything.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> What about drying? Drying the dishes and putting away?</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I can do that perfectly fine. Maybe instead of dividing by who does what on what days, someone does the dishes and I dry them and put them away. Some things you do need eyesight for. I've got a little vision, but I can try. I just can't guarantee you guys would be happy with it. I don't want you to think I'm lazy - I love cleaning. It's therapeutic for me. I just can't do them to a good standard.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topic4" aria-expanded="false" aria-controls="topic4">
+              <span aria-hidden="true">&#128104;&#8205;&#128187;</span>&nbsp; 4. Yesterday's Conflict
+            </button>
+          </h3>
+          <div id="topic4" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p><span class="speaker speaker-tim">TIM:</span> Going back to communication for a moment - having weekly meetings with an interpreter, or fortnightly, would be necessary at first. The phone and laptop are my work realm, and having an overlap with so many messages, with the keyboard breaking - it'd be really good to put time aside every week, just to check in where we can all bring stuff to the table.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> 24-hour rule for when we're feeling emotional. Because - and this is you and me both, Tim - we retreat a bit when we're overwhelmed. One of us dives into games, one dives into work. Whereas Nessa tackles it very differently.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> Just please let me know before you have that 24 hours. Sometimes I might read that silence and think "oh my god, have I pissed them off?" If it can be prefaced - "hey, I need space" or "I'm enforcing 24 hours" - just so I can read the situation.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> When it's hard to communicate, it's led to one of us retreating in the past, with you not knowing why. It's a clash of communication styles. We've all gotten more frustrated than we needed to. Like me last night.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I was trying to explain about my technology. My keyboard broke and I felt like I couldn't fully participate in the conversation we were going to have. I didn't want any miscommunications for such an important topic. I didn't want to make the situation worse if I mistyped or misread things. So I was trying to explain what was happening, but I don't know how that came across. I felt like I couldn't really do anything at that point.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> That might play a part. But what really upset me - I'd been trying to communicate for hours, even a day or two, that this was important. I'd put a lot of effort in during the week. Even before the keyboard issues, what I was saying was getting lost in back-to-back messages. I was trying to communicate how I was feeling, and it was drowned out by 4 or 5 messages about something completely self-related, as opposed to being in response.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I understand that now. I really didn't mean to. I obviously would never want my technology to break - it was so stressful, terrible timing. I do hope you understand that messaging is important to my own way of communicating to the entire world without an interpreter.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> Sorry to interrupt. I know we've heard this a lot of times and it's true. But - try not messaging with voice-detect when you can't read what we were saying. You could communicate to us, but maybe knowing when not to message if you can't read the replies.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> We know it's the only way you can communicate. We understand that. But it just became a loss of context - the gravity of what was happening or what was being meant.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> It felt a bit walked-over. A self-induced frustration being blasted at us when we were still trying to catch up and process the proceedings of the day. Trying to go about things respectfully.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I understand. I was just explaining the timing. Even when I speak to voice-to-text it doesn't really work well. Technology is the main of my life. I feel completely useless if I can't type.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> I know you laugh at my sign language, but I'm a pretty good reader of communication. If it's not working and you came out and did hand gestures, almost like charades - I'm pretty intuitive with that.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> The problem I get scared of is that if I speak to you, it feels like one-way communication - because you wouldn't be able to communicate back to me.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> It does. And it's gonna sound bad, but it feels like that either way a lot of the time for me. So I understand and respect what you're saying. I just think we can work on that, and I don't know how yet.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> I see capability in you that you don't see in yourself. I think you're more capable than you've been led to believe. There's more that blind-deaf people are capable of - you just have to be open to some of it.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> We're not here to do anyone wrong.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> Just thinking about things, not doing them straight away - thinking about them more seriously and doing some research yourself.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I can definitely do that. I am so open to ideas. I can't promise I'll always like them - sometimes I don't feel comfortable - but I'm definitely happy if you have any ideas, please swing them my way. I will try - like, I'll usually try new food even though I know I won't like it.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> I call bullshit, in the most caring, loving, want-to-set-you-up-for-success way. We're not going to be in Perth with you forever. You're such a good friend - dog family, stronger than real family. Having you set up the tools and resources, I can provide it as the technology guy, the big nerd. And D'Arcy can be the cheerleader in the bikini.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> Yeah. I'll make them too. Of course it'll be handy.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topic5" aria-expanded="false" aria-controls="topic5">
+              <span aria-hidden="true">&#128197;</span>&nbsp; 5. Meeting Cadence &amp; Tools
+            </button>
+          </h3>
+          <div id="topic5" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p><span class="speaker speaker-nessa">NESSA*:</span> Can we set a date for the next meeting? If we set a date and then have nothing to talk about, can we cancel - just so I can save my interpreter funding? Or would you guys still want to meet?</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> Painfully honest - I think it would be necessary even if there's nothing big. It'll induce a positive habit. We don't want to lose touch by just texting for weeks on end. It helps us touch base with reality and be a bit more open than text allows.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> That makes sense. Once a week, I can book an interpreter for dinner. We can go through positives and negatives. Just so you know - if I cancel less than 2 days out, I have to pay the fee. So if we cancel, it needs to be at least 2 days before.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> Tuesdays?</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> Tuesday works for me. Breaks up the week. Mid-week.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> Maybe we can start once I'm back in 2-3 weeks. I'm back on the 12th of May.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> Probably won't want a meal on the 12th - you'll be tired. Maybe the Tuesday following. So the 19th.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> I thought - because screen readers are harder - Google has Calendar and Sheets. Could be a way for us to keep track of things. Joint calendar so we know what's going on with each other, spreadsheet for money.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I tried Google Sheets in the past and it didn't work for me.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> With AI in the last year, all these companies have shipped accessibility features that didn't exist or didn't work before. I've been trialling a lot with my student Joey, who you know, on her braille keyboard for that reason.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I'm happy to try.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> If not, I can build the website with it. High contrast, emojis. We'll call it Zebra Jukebox.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I still don't understand what that means. I get so confused when you say that.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> It's so my phone can understand when I'm doing voice-to-text. It's a random combination of words that's hard to mix up. Easy to hear vocally - so Siri, drunk or not, can make sense of it.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> Oh, gotcha. Now that makes sense.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topic6" aria-expanded="false" aria-controls="topic6">
+              <span aria-hidden="true">&#128737;&#65039;</span>&nbsp; 6. Security: The Dog &amp; The Cellar
+            </button>
+          </h3>
+          <div id="topic6" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I may have spoken to you about the dog next door. It's so dangerous - we've reported it twice. I don't want Duke to get harmed or killed by this bull mastiff. It almost got me last night - I went out for a walk and came back 30 seconds later because it lunged at us while I was walking Duke. Thank god Duke is well trained. I really want to move away from here.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> After my walk, I went out the back. Behind the red couch where it was blocked off by a board. That hole - it's a big cavity. It scared the living daylights out of me.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> I think Alex closed it when she moved in.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> It's a cellar underneath the house.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> What? Are you serious? I did not know about that. Alex said they closed it.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> Maybe she didn't understand how big it was. Alex hasn't told me anything about it.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> Just letting you know in case you go past - it's behind the couch to the right, near the power point.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> Tim's putting the Google camera outside tonight. Because I freaked out.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topic7" aria-expanded="false" aria-controls="topic7">
+              <span aria-hidden="true">&#128202;</span>&nbsp; 7. Future Plans &amp; Moving Timelines
+            </button>
+          </h3>
+          <div id="topic7" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> In the last week or so, I've been presented with some other work opportunities outside of Bailey Nelson. Potentially starting here in WA and then going east. Where and when isn't fully set yet. The time here will be of a shorter tenure than we recalibrated to.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> Okay. That makes planning a bit harder, because I'm planning to move when you go - I can't afford this place on my own.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> We're not gonna leave you high and dry, plenty of warning. Now is plenty of warning. Maybe August or September - a break from end of financial year.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> I reckon June, personally. My work was accommodating before but right now it's a shit show. My bag was stolen from my car today - by that student who came in.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> What?</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> Remember I had to go to the police yesterday - that guy who threatened all those women, then emailed the campus 70 times over the weekend threatening me. He threatened to come into work. Today everyone was on guard - they had me in a back classroom, all the burly men trainers in the hall. I suspect, but can't confirm, he or someone went through my car.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> I'm sorry. I think it's bad juju we've got. Hopefully it comes back in the right form.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> In terms of timing for a place - I should plan around you guys. Your work situation is more important. So you do what you need to do, and I'll plan around it.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> That's a good point. Yeah.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topic8" aria-expanded="false" aria-controls="topic8">
+              <span aria-hidden="true">&#9989;</span>&nbsp; 8. Sign-off &amp; Immediate Steps
+            </button>
+          </h3>
+          <div id="topic8" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p><span class="speaker speaker-tim">TIM:</span> Immediate steps: group chat on Messenger. Spreadsheet and calendar. Use emojis more for context and mood. 24-hour rule, with a prefaced boundary call. I'll look at cleaners. Potential Google Home for cleaning. That's it.</p>
+              <p><span class="speaker speaker-darcy">D'ARCY:</span> Yeah, good, done.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> Hopefully Anna's available. Maybe we can organise a few different interpreters even.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> I'll work it out. I'm a web developer. It'll be something fun that you can't see - but it will have screen reader support.</p>
+              <p><span class="speaker speaker-nessa">NESSA*:</span> Cool. Good.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> Calendar. 6:30pm? Tuesday the 19th of May.</p>
+              <p><span class="speaker speaker-anna">ANNA:</span> I'm gonna go. Goodbye, and thank you so much.</p>
+              <p><span class="speaker speaker-tim">TIM:</span> Thank you. No worries.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container text-center">
+    <p class="mb-0">Zebra Jukebox - meeting record, 29 April 2026</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="meeting.js"></script>
+
+</body>
+</html>

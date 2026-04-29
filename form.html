@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Housemate Meeting Tracker</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h1,
+        h2 {
+            margin-top: 0;
+        }
+
+        .intro {
+            background: #eef6f6;
+            padding: 16px;
+            border-left: 5px solid #2f9ea0;
+            border-radius: 10px;
+            margin-bottom: 24px;
+        }
+
+        .expectation {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+            align-items: flex-start;
+        }
+
+        .topic {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            background: #fafafa;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        select,
+        textarea,
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .signatures {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        button {
+            background: #2f9ea0;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #247f81;
+        }
+
+        @media (max-width: 700px) {
+            .signatures {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            button {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Housemate Meeting Tracker</h1>
+
+        <div class="intro">
+            <strong>Purpose:</strong>
+            This meeting is to raise issues in a calm, controlled environment without relying on constant texting.
+            The goal is to keep communication clear, fair, accessible, and respectful for everyone.
+        </div>
+
+        <h2>Expectations Before Starting</h2>
+
+        <div class="expectation">
+            <input type="checkbox" />
+            <span>We agree to take turns speaking and not interrupt each other.</span>
+        </div>
+
+        <div class="expectation">
+            <input type="checkbox" />
+            <span>We agree to stay on one topic at a time.</span>
+        </div>
+
+        <div class="expectation">
+            <input type="checkbox" />
+            <span>We agree each topic should be parked, unresolved, or resolved before moving on.</span>
+        </div>
+
+        <div class="expectation">
+            <input type="checkbox" />
+            <span>We agree iMessage is for house logistics only.</span>
+        </div>
+
+        <div class="expectation">
+            <input type="checkbox" />
+            <span>We agree Facebook Messenger can be used for social chat and muted when needed.</span>
+        </div>
+
+        <div class="expectation">
+            <input type="checkbox" />
+            <span>We agree non-urgent concerns should wait 24 hours before being raised.</span>
+        </div>
+
+        <hr />
+
+        <h2>Meeting Topics</h2>
+
+        <div id="topics"></div>
+
+        <h2>Final Outcome / Summary</h2>
+        <textarea placeholder="Write the agreed outcomes from this meeting here..."></textarea>
+
+        <h2>Agreement</h2>
+        <p>By signing below, we agree these notes reflect the meeting outcome.</p>
+
+        <div class="signatures">
+            <input type="text" placeholder="Tim signature/name" />
+            <input type="text" placeholder="Ness signature/name" />
+            <input type="text" placeholder="D’arcy signature/name" />
+        </div>
+
+        <button onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <script>
+        const topics = [
+            "Communication rules",
+            "Weekly housemate meeting with interpreter",
+            "iMessage for house logistics",
+            "Facebook Messenger for social chat",
+            "24-hour rule for non-urgent issues",
+            "Cleaning roster",
+            "Equal household responsibilities",
+            "Laundry costs and repayments",
+            "Shared food and supplies",
+            "Financial spreadsheet",
+            "Dogs and pet responsibilities",
+            "Coming and going updates",
+            "Respect and acknowledgement",
+            "Boundaries and personal space",
+            "Google Site for shared access"
+        ];
+
+        const topicsContainer = document.getElementById("topics");
+
+        topics.forEach((topic, index) => {
+            const div = document.createElement("div");
+            div.className = "topic";
+
+            div.innerHTML = `
+        <h3>${index + 1}. ${topic}</h3>
+
+        <label>Status</label>
+        <select>
+          <option value="">Select status</option>
+          <option value="parked">Parked</option>
+          <option value="unresolved">Unresolved</option>
+          <option value="resolved">Resolved</option>
+        </select>
+
+        <label>Notes</label>
+        <textarea placeholder="Add notes, agreed actions, concerns, or next steps..."></textarea>
+
+        <label>Action / Owner</label>
+        <input type="text" placeholder="Who is responsible for this?" />
+      `;
+
+            topicsContainer.appendChild(div);
+        });
+    </script>
+</body>
+
+</html>

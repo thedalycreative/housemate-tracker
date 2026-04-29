@@ -1,0 +1,268 @@
+:root {
+  --zj-dark: #1a1a2e;
+  --zj-teal: #16697a;
+  --zj-coral: #db6400;
+  --zj-cream: #faf3e0;
+  --zj-light: #f8f9fa;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--zj-dark);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  z-index: 9999;
+  font-size: 1rem;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1a1a2e;
+  background: var(--zj-cream);
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+.navbar {
+  background: var(--zj-dark) !important;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-size: 1.4rem;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+section:nth-child(even) {
+  background: #fff;
+}
+
+.card {
+  border: 2px solid #dee2e6;
+  border-radius: 0.75rem;
+}
+
+.card:focus-within {
+  outline: 3px solid var(--zj-teal);
+  outline-offset: 2px;
+}
+
+.btn-zj {
+  background: var(--zj-teal);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-zj:hover, .btn-zj:focus {
+  background: #124e5a;
+  color: #fff;
+}
+
+.btn-outline-zj {
+  border: 2px solid var(--zj-teal);
+  color: var(--zj-teal);
+  font-weight: 600;
+}
+
+.btn-outline-zj:hover, .btn-outline-zj:focus {
+  background: var(--zj-teal);
+  color: #fff;
+}
+
+.hero {
+  background: var(--zj-dark);
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.badge-status {
+  font-size: 0.85rem;
+  padding: 0.4em 0.8em;
+}
+
+.noticeboard-post {
+  border-left: 4px solid var(--zj-teal);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: #fff;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.noticeboard-post .post-meta {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.bill-paid {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.signature-box {
+  border: 2px dashed #adb5bd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  min-height: 80px;
+}
+
+.signature-box.signed {
+  border-color: var(--zj-teal);
+  background: #e8f5f5;
+}
+
+.auslan-card {
+  transition: transform 0.2s;
+}
+
+.auslan-card:hover {
+  transform: translateY(-2px);
+}
+
+.calendar-iframe {
+  border: 0;
+  width: 100%;
+  height: 500px;
+  border-radius: 0.5rem;
+}
+
+.house-rule {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.house-rule:last-child {
+  border-bottom: none;
+}
+
+footer {
+  background: var(--zj-dark);
+  color: #adb5bd;
+  padding: 1.5rem 0;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--zj-coral);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.8rem; }
+  section { padding: 2rem 0; }
+  .calendar-iframe { height: 350px; }
+}
+
+/* Section icon emojis */
+.section-icon {
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+
+/* Quick links on hero */
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.quick-links a {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.quick-links a:hover, .quick-links a:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Meeting page transcript */
+.speaker {
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-right: 0.4rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+.speaker-tim {
+  background: #16697a;
+  color: #fff;
+}
+
+.speaker-darcy {
+  background: #db6400;
+  color: #fff;
+}
+
+.speaker-nessa {
+  background: #6f42c1;
+  color: #fff;
+}
+
+.speaker-anna {
+  background: #6c757d;
+  color: #fff;
+}
+
+.accordion-button {
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #e8f5f5;
+  color: var(--zj-dark);
+}
+
+/* Signature display */
+.signature-date {
+  font-style: italic;
+}
+
+#agreement-printable {
+  background: #fff;
+}
+
+#agreement-printable h4 {
+  color: var(--zj-teal);
+  margin-top: 1rem;
+}
+
+/* Print styles for the agreement */
+@media print {
+  body * { visibility: hidden; }
+  #agreement-printable, #agreement-printable * { visibility: visible; }
+  #agreement-printable {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none !important;
+    padding: 0 !important;
+  }
+  nav, footer, .btn, .skip-link { display: none !important; }
+}
