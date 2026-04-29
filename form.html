@@ -5,29 +5,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Housemate Meeting Tracker</title>
+    <!-- Use Bootstrap to match the main site and provide accordions -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
             background: #f5f5f5;
-            color: #222;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.5;
+            padding: 20px 0;
         }
 
-        .container {
+        .container-box {
             max-width: 900px;
             margin: auto;
             background: white;
-            padding: 24px;
+            padding: 30px;
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        h1,
-        h2 {
-            margin-top: 0;
         }
 
         .intro {
@@ -45,35 +38,7 @@
             align-items: flex-start;
         }
 
-        .topic {
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 16px;
-            background: #fafafa;
-        }
-
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        select,
-        textarea,
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            margin-bottom: 12px;
-            border-radius: 8px;
-            border: 1px solid #bbb;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-
         textarea {
-            min-height: 90px;
             resize: vertical;
         }
 
@@ -84,46 +49,51 @@
             margin-top: 20px;
         }
 
-        button {
+        .btn-zj {
             background: #2f9ea0;
             color: white;
             border: none;
-            padding: 12px 18px;
-            border-radius: 10px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 20px;
         }
 
-        button:hover {
+        .btn-zj:hover {
             background: #247f81;
+            color: white;
         }
 
-        @media (max-width: 700px) {
-            .signatures {
-                grid-template-columns: 1fr;
-            }
+        .pdf-mode textarea, .pdf-mode input, .pdf-mode select {
+            border: none !important;
+            background: transparent !important;
+            resize: none !important;
+            box-shadow: none !important;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        .pdf-mode .accordion-button::after {
+            display: none;
         }
 
-        @media print {
-            button {
-                display: none;
-            }
+        .pdf-mode .accordion-button {
+            background: #f8f9fa !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 10px !important;
+        }
 
-            body {
-                background: white;
-            }
+        .pdf-mode .accordion-body {
+            padding: 0 10px 10px 10px !important;
+        }
 
-            .container {
-                box-shadow: none;
-            }
+        .pdf-mode .remove-btn, .pdf-mode .btn-add {
+            display: none !important;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Housemate Meeting Tracker</h1>
+    <div class="container-box" id="tracker-content">
+        <h1 class="mb-4">Housemate Meeting Tracker</h1>
 
         <div class="intro">
             <strong>Purpose:</strong>
@@ -131,104 +101,163 @@
             The goal is to keep communication clear, fair, accessible, and respectful for everyone.
         </div>
 
-        <h2>Expectations Before Starting</h2>
+        <h2 class="h4 mt-4">Expectations Before Starting</h2>
 
         <div class="expectation">
-            <input type="checkbox" />
+            <input type="checkbox" class="form-check-input mt-1" />
             <span>We agree to take turns speaking and not interrupt each other.</span>
         </div>
 
         <div class="expectation">
-            <input type="checkbox" />
+            <input type="checkbox" class="form-check-input mt-1" />
             <span>We agree to stay on one topic at a time.</span>
         </div>
 
         <div class="expectation">
-            <input type="checkbox" />
+            <input type="checkbox" class="form-check-input mt-1" />
             <span>We agree each topic should be parked, unresolved, or resolved before moving on.</span>
         </div>
 
         <div class="expectation">
-            <input type="checkbox" />
+            <input type="checkbox" class="form-check-input mt-1" />
             <span>We agree iMessage is for house logistics only.</span>
         </div>
 
         <div class="expectation">
-            <input type="checkbox" />
+            <input type="checkbox" class="form-check-input mt-1" />
             <span>We agree Facebook Messenger can be used for social chat and muted when needed.</span>
         </div>
 
         <div class="expectation">
-            <input type="checkbox" />
+            <input type="checkbox" class="form-check-input mt-1" />
             <span>We agree non-urgent concerns should wait 24 hours before being raised.</span>
         </div>
 
-        <hr />
+        <hr class="my-4" />
 
-        <h2>Meeting Topics</h2>
+        <h2 class="h4 mb-3">Meeting Topics</h2>
+        
+        <div class="accordion mb-4" id="topicsAccordion"></div>
 
-        <div id="topics"></div>
+        <button class="btn btn-warning mb-4 btn-add" onclick="addTopic()">+ Add Discussion Topic</button>
 
-        <h2>Final Outcome / Summary</h2>
-        <textarea placeholder="Write the agreed outcomes from this meeting here..."></textarea>
+        <h2 class="h4">Final Outcome / Summary</h2>
+        <textarea class="form-control mb-4" rows="4" placeholder="Write the agreed outcomes from this meeting here..."></textarea>
 
-        <h2>Agreement</h2>
+        <h2 class="h4">Agreement</h2>
         <p>By signing below, we agree these notes reflect the meeting outcome.</p>
 
         <div class="signatures">
-            <input type="text" placeholder="Tim signature/name" />
-            <input type="text" placeholder="Ness signature/name" />
-            <input type="text" placeholder="D’arcy signature/name" />
+            <input type="text" class="form-control" placeholder="Tim signature/name" />
+            <input type="text" class="form-control" placeholder="Ness signature/name" />
+            <input type="text" class="form-control" placeholder="D’arcy signature/name" />
         </div>
-
-        <button onclick="window.print()">Print / Save as PDF</button>
     </div>
 
+    <div class="text-center mt-4 mb-5">
+        <button class="btn btn-zj btn-lg px-5" id="downloadPdfBtn" onclick="generatePDF()">Print / Save as PDF</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
     <script>
-        const topics = [
-            "Communication rules",
-            "Weekly housemate meeting with interpreter",
-            "iMessage for house logistics",
-            "Facebook Messenger for social chat",
-            "24-hour rule for non-urgent issues",
-            "Cleaning roster",
-            "Equal household responsibilities",
-            "Laundry costs and repayments",
-            "Shared food and supplies",
-            "Financial spreadsheet",
-            "Dogs and pet responsibilities",
-            "Coming and going updates",
-            "Respect and acknowledgement",
-            "Boundaries and personal space",
-            "Google Site for shared access"
-        ];
+        const topicsAccordion = document.getElementById("topicsAccordion");
+        let topicCount = 0;
 
-        const topicsContainer = document.getElementById("topics");
-
-        topics.forEach((topic, index) => {
+        function addTopic() {
+            topicCount++;
+            const topicId = 'topic' + topicCount;
             const div = document.createElement("div");
-            div.className = "topic";
+            div.className = "accordion-item";
 
             div.innerHTML = `
-        <h3>${index + 1}. ${topic}</h3>
+                <h3 class="accordion-header" id="heading-${topicId}">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${topicId}" aria-expanded="true" aria-controls="collapse-${topicId}">
+                        Topic ${topicCount}
+                    </button>
+                </h3>
+                <div id="collapse-${topicId}" class="accordion-collapse collapse show" aria-labelledby="heading-${topicId}">
+                    <div class="accordion-body">
+                        <div class="d-flex justify-content-end mb-2">
+                            <button class="btn btn-sm btn-outline-danger remove-btn" onclick="this.closest('.accordion-item').remove()">Remove</button>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Discussion Point</label>
+                            <input type="text" class="form-control" placeholder="What are we discussing?" oninput="updateAccordionTitle(this, '${topicId}')" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Status</label>
+                            <select class="form-select">
+                                <option value="">Select status</option>
+                                <option value="parked">Parked</option>
+                                <option value="unresolved">Unresolved</option>
+                                <option value="resolved">Resolved</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Notes / Actions</label>
+                            <textarea class="form-control" rows="3" placeholder="Add notes, agreed actions, concerns, or next steps..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Owner</label>
+                            <input type="text" class="form-control" placeholder="Who is responsible for this?" />
+                        </div>
+                    </div>
+                </div>
+            `;
 
-        <label>Status</label>
-        <select>
-          <option value="">Select status</option>
-          <option value="parked">Parked</option>
-          <option value="unresolved">Unresolved</option>
-          <option value="resolved">Resolved</option>
-        </select>
+            topicsAccordion.appendChild(div);
+        }
 
-        <label>Notes</label>
-        <textarea placeholder="Add notes, agreed actions, concerns, or next steps..."></textarea>
+        function updateAccordionTitle(inputElement, topicId) {
+            const btn = document.querySelector(\`#heading-\${topicId} .accordion-button\`);
+            if (btn) {
+                btn.textContent = inputElement.value ? inputElement.value : \`Topic \${topicId.replace('topic', '')}\`;
+            }
+        }
 
-        <label>Action / Owner</label>
-        <input type="text" placeholder="Who is responsible for this?" />
-      `;
+        // Add one empty topic by default
+        addTopic();
 
-            topicsContainer.appendChild(div);
-        });
+        function generatePDF() {
+            const element = document.getElementById("tracker-content");
+            const btn = document.getElementById("downloadPdfBtn");
+            
+            // Expand all accordions before generating PDF so content isn't hidden
+            document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+                collapse.classList.add('show');
+            });
+            
+            // Auto-resize textareas to fit content
+            document.querySelectorAll('textarea').forEach(ta => {
+                ta.style.height = 'auto';
+                ta.style.height = ta.scrollHeight + 'px';
+            });
+
+            element.classList.add("pdf-mode");
+            btn.innerHTML = "Generating...";
+            btn.disabled = true;
+
+            const opt = {
+                margin:       0.3,
+                filename:     'housemate-meeting.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                element.classList.remove("pdf-mode");
+                btn.innerHTML = "Print / Save as PDF";
+                btn.disabled = false;
+            }).catch(err => {
+                console.error("PDF generation failed:", err);
+                element.classList.remove("pdf-mode");
+                btn.innerHTML = "Print / Save as PDF";
+                btn.disabled = false;
+            });
+        }
     </script>
 </body>
 

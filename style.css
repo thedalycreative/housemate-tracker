@@ -266,3 +266,104 @@ footer {
   }
   nav, footer, .btn, .skip-link { display: none !important; }
 }
+
+/* Logo */
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--zj-cream);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.logo-circle-large {
+  width: 96px;
+  height: 96px;
+  font-size: 3.5rem;
+  border: 3px solid var(--zj-teal);
+  margin: 0 auto 1rem auto;
+  display: flex;
+  background: #fff;
+}
+
+/* Next meeting callout */
+.next-meeting-callout {
+  background: linear-gradient(135deg, var(--zj-teal), #0e4754);
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.next-meeting-callout h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.next-meeting-callout .btn {
+  background: #fff;
+  color: var(--zj-teal);
+  font-weight: 700;
+  border: none;
+}
+
+.next-meeting-callout .btn:hover,
+.next-meeting-callout .btn:focus {
+  background: var(--zj-cream);
+  color: var(--zj-dark);
+}
+
+/* Auslan sign list - clickable links */
+.sign-link {
+  display: block;
+  padding: 0.4rem 0.6rem;
+  color: var(--zj-dark);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.sign-link:hover,
+.sign-link:focus {
+  background: #e8f5f5;
+  border-color: var(--zj-teal);
+  color: var(--zj-teal);
+  text-decoration: none;
+}
+
+.sign-link::after {
+  content: " \2197";
+  opacity: 0.5;
+  font-size: 0.85em;
+}
+
+.sign-category {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  height: 100%;
+  border: 1px solid #dee2e6;
+}
+
+.sign-category h4 {
+  color: var(--zj-teal);
+  border-bottom: 2px solid var(--zj-teal);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

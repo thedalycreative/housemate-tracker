@@ -4,21 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zebra Jukebox - Housemate Hub</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%A6%93</text></svg>">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Screen reader announcements -->
 <div id="sr-announce" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
 
-<!-- Skip link -->
 <a href="#main" class="skip-link">Skip to main content</a>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Main navigation">
   <div class="container">
-    <a class="navbar-brand" href="#">ZEBRA JUKEBOX</a>
+    <a class="navbar-brand" href="#">
+      <span class="logo-circle" aria-hidden="true">&#129427;</span>
+      ZEBRA JUKEBOX
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -27,9 +28,9 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#rules"><span aria-hidden="true">&#128203;</span> House Rules</a></li>
         <li class="nav-item"><a class="nav-link" href="#noticeboard"><span aria-hidden="true">&#128204;</span> Noticeboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="#bills"><span aria-hidden="true">&#128176;</span> Bills</a></li>
         <li class="nav-item"><a class="nav-link" href="#calendar"><span aria-hidden="true">&#128197;</span> Calendar</a></li>
         <li class="nav-item"><a class="nav-link" href="#meetings"><span aria-hidden="true">&#129309;</span> Meetings</a></li>
-        <li class="nav-item"><a class="nav-link" href="#bills"><span aria-hidden="true">&#128176;</span> Bills</a></li>
         <li class="nav-item"><a class="nav-link" href="#auslan"><span aria-hidden="true">&#129304;</span> Auslan</a></li>
       </ul>
     </div>
@@ -41,15 +42,16 @@
   <!-- Hero -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="container text-center">
+      <div class="logo-circle logo-circle-large" aria-hidden="true">&#129427;</div>
       <h1 id="hero-heading">ZEBRA JUKEBOX</h1>
       <p class="lead">Home base for Tim, D'Arcy &amp; Nessa</p>
       <p>Shared rules, daily messages, the calendar, bills, meetings, and learning Auslan - all in one accessible place.</p>
       <nav class="quick-links" aria-label="Quick navigation">
         <a href="#rules"><span aria-hidden="true">&#128203;</span> Rules</a>
         <a href="#noticeboard"><span aria-hidden="true">&#128204;</span> Noticeboard</a>
+        <a href="#bills"><span aria-hidden="true">&#128176;</span> Bills</a>
         <a href="#calendar"><span aria-hidden="true">&#128197;</span> Calendar</a>
         <a href="#meetings"><span aria-hidden="true">&#129309;</span> Meetings</a>
-        <a href="#bills"><span aria-hidden="true">&#128176;</span> Bills</a>
         <a href="#auslan"><span aria-hidden="true">&#129304;</span> Auslan</a>
       </nav>
     </div>
@@ -160,97 +162,7 @@
     </div>
   </section>
 
-  <!-- CALENDAR -->
-  <section id="calendar" aria-labelledby="cal-heading">
-    <div class="container">
-      <h2 id="cal-heading"><span aria-hidden="true" class="section-icon">&#128197;</span>Shared Calendar</h2>
-      <p>House events, support workers, away dates, meetings.</p>
-
-      <iframe class="calendar-iframe"
-        src="https://calendar.google.com/calendar/embed?src=507b7b991e14cd767316d0cd3e65ece99f342fbd92d24ec25e9daf4a44a866b8%40group.calendar.google.com&ctz=Australia%2FPerth"
-        title="Shared house Google Calendar"
-        loading="lazy"></iframe>
-
-      <div class="mt-3">
-        <a href="https://calendar.google.com/calendar/ical/507b7b991e14cd767316d0cd3e65ece99f342fbd92d24ec25e9daf4a44a866b8%40group.calendar.google.com/private-b4e242bc9c3e9f619cc2512376150fb9/basic.ics"
-          class="btn btn-outline-zj" download>
-          <span aria-hidden="true">&#128229;</span> Download calendar (.ics)
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MEETINGS -->
-  <section id="meetings" aria-labelledby="meetings-heading">
-    <div class="container">
-      <h2 id="meetings-heading"><span aria-hidden="true" class="section-icon">&#129309;</span>House Meetings &amp; Agreements</h2>
-      <p>Formal records of every meeting, with signed agreements and downloadable PDFs.</p>
-
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <div class="card h-100 border-2 border-info">
-            <div class="card-body">
-              <h3 class="h5"><span aria-hidden="true">&#128221;</span> Meeting: 29 April 2026</h3>
-              <p class="text-muted small">First formal meeting. Established communication, cleaning, meeting cadence, and security agreements.</p>
-              <p><strong>Present:</strong> Tim, D'Arcy, Nessa (via interpreter Anna)</p>
-              <a href="meeting-2026-04-29.html" class="btn btn-zj">
-                <span aria-hidden="true">&#128270;</span> View meeting &amp; agreement
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h3 class="h5"><span aria-hidden="true">&#128197;</span> Next: 19 May 2026</h3>
-              <p>Tuesday 6:30 pm with Auslan interpreter. Nessa returns from Bali on 12 May.</p>
-              <p class="text-muted small">Add agenda items to the noticeboard above between now and then.</p>
-              <a href="minutes-04-29.html" class="btn btn-outline-zj">
-                <span aria-hidden="true">&#128203;</span> Open meeting tracker template
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quick local meeting log -->
-      <div class="mt-4">
-        <h3 class="h5"><span aria-hidden="true">&#128190;</span> Quick agreement log (saved to this device)</h3>
-        <p class="text-muted small">Use this to capture short interim agreements between formal meetings. All 3 must agree to save.</p>
-        <div class="row">
-          <div class="col-lg-6 mb-3">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="h6">New entry</h4>
-                <div class="mb-2">
-                  <label for="meeting-date" class="form-label">Date</label>
-                  <input type="date" class="form-control" id="meeting-date">
-                </div>
-                <div class="mb-2">
-                  <label for="meeting-agreements" class="form-label">Agreements</label>
-                  <textarea class="form-control" id="meeting-agreements" rows="4" placeholder="Short note on what was agreed..."></textarea>
-                </div>
-                <fieldset>
-                  <legend class="h6">Sign off (all 3 required)</legend>
-                  <div class="form-check"><input class="form-check-input" type="checkbox" id="sig-Tim"><label class="form-check-label" for="sig-Tim">Tim</label></div>
-                  <div class="form-check"><input class="form-check-input" type="checkbox" id="sig-DArcy"><label class="form-check-label" for="sig-DArcy">D'Arcy</label></div>
-                  <div class="form-check"><input class="form-check-input" type="checkbox" id="sig-Nessa"><label class="form-check-label" for="sig-Nessa">Nessa</label></div>
-                </fieldset>
-                <button class="btn btn-zj mt-2" onclick="saveMeeting()"><span aria-hidden="true">&#9989;</span> Save</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h4 class="h6">Past entries</h4>
-            <div id="meetings-list"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BILLS -->
+  <!-- BILLS (moved up) -->
   <section id="bills" aria-labelledby="bills-heading">
     <div class="container">
       <h2 id="bills-heading"><span aria-hidden="true" class="section-icon">&#128176;</span>Bills &amp; Expenses</h2>
@@ -308,13 +220,115 @@
     </div>
   </section>
 
+  <!-- CALENDAR -->
+  <section id="calendar" aria-labelledby="cal-heading">
+    <div class="container">
+      <h2 id="cal-heading"><span aria-hidden="true" class="section-icon">&#128197;</span>Shared Calendar</h2>
+      <p>House events, support workers, away dates, meetings.</p>
+
+      <iframe class="calendar-iframe"
+        src="https://calendar.google.com/calendar/embed?src=507b7b991e14cd767316d0cd3e65ece99f342fbd92d24ec25e9daf4a44a866b8%40group.calendar.google.com&ctz=Australia%2FPerth"
+        title="Shared house Google Calendar"
+        loading="lazy"></iframe>
+
+      <div class="mt-3">
+        <a href="https://calendar.google.com/calendar/ical/507b7b991e14cd767316d0cd3e65ece99f342fbd92d24ec25e9daf4a44a866b8%40group.calendar.google.com/private-b4e242bc9c3e9f619cc2512376150fb9/basic.ics"
+          class="btn btn-outline-zj" download>
+          <span aria-hidden="true">&#128229;</span> Download calendar (.ics)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEETINGS -->
+  <section id="meetings" aria-labelledby="meetings-heading">
+    <div class="container">
+      <h2 id="meetings-heading"><span aria-hidden="true" class="section-icon">&#129309;</span>House Meetings &amp; Agreements</h2>
+      <p>Formal records of every house meeting, with signed agreements and downloadable PDFs.</p>
+
+      <!-- Next meeting callout -->
+      <div class="next-meeting-callout" role="region" aria-label="Next meeting">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h3 class="h5"><span aria-hidden="true">&#128197;</span> Next meeting: Tuesday 19 May 2026, 6:30 pm</h3>
+            <p class="mb-md-0">With Auslan interpreter. Nessa returns from Bali on 12 May. Add agenda items to the noticeboard above.</p>
+          </div>
+          <div class="col-md-4 text-md-end mt-3 mt-md-0">
+            <a href="meeting-tracker.html" class="btn">
+              <span aria-hidden="true">&#128203;</span> Open meeting tracker template
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Past meetings -->
+      <h3 class="h5 mt-4"><span aria-hidden="true">&#128218;</span> Past meetings</h3>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 border-2 border-info">
+            <div class="card-body">
+              <h4 class="h6 text-uppercase text-muted">29 April 2026</h4>
+              <h5 class="card-title">First formal meeting</h5>
+              <p class="card-text">Established communication channels, cleaning split, weekly meeting cadence, and security agreements. 14 items signed off.</p>
+              <p class="text-muted small mb-3"><strong>Present:</strong> Tim, D'Arcy, Nessa (via interpreter Anna)</p>
+              <a href="meeting-2026-04-29.html" class="btn btn-zj">
+                <span aria-hidden="true">&#128270;</span> View meeting &amp; agreement
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 border-light bg-light">
+            <div class="card-body d-flex align-items-center justify-content-center text-center text-muted">
+              <div>
+                <p class="mb-1" style="font-size: 2rem;" aria-hidden="true">&#128221;</p>
+                <p class="mb-0">Future meeting records will appear here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick agreement log -->
+      <div class="card mt-4">
+        <div class="card-body">
+          <h3 class="h5"><span aria-hidden="true">&#128190;</span> Quick agreement log</h3>
+          <p class="text-muted small mb-3">For short interim agreements between formal meetings. Saved to this device. All 3 must agree to save.</p>
+          <div class="row g-3">
+            <div class="col-lg-6">
+              <div class="mb-2">
+                <label for="meeting-date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="meeting-date">
+              </div>
+              <div class="mb-2">
+                <label for="meeting-agreements" class="form-label">Agreement</label>
+                <textarea class="form-control" id="meeting-agreements" rows="3" placeholder="Short note on what was agreed..."></textarea>
+              </div>
+              <fieldset class="mb-2">
+                <legend class="h6">Sign off (all 3 required)</legend>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="sig-Tim"><label class="form-check-label" for="sig-Tim">Tim</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="sig-DArcy"><label class="form-check-label" for="sig-DArcy">D'Arcy</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="sig-Nessa"><label class="form-check-label" for="sig-Nessa">Nessa</label></div>
+              </fieldset>
+              <button class="btn btn-zj" onclick="saveMeeting()"><span aria-hidden="true">&#9989;</span> Save</button>
+            </div>
+            <div class="col-lg-6">
+              <h4 class="h6">Past entries</h4>
+              <div id="meetings-list"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- AUSLAN -->
   <section id="auslan" aria-labelledby="auslan-heading">
     <div class="container">
       <h2 id="auslan-heading"><span aria-hidden="true" class="section-icon">&#129304;</span>Auslan Sign Language</h2>
-      <p>Resources for Tim and D'Arcy to learn Auslan and communicate directly with Nessa.</p>
+      <p>Resources for Tim and D'Arcy to learn Auslan and communicate directly with Nessa. Click any word below to see its sign on Auslan Signbank.</p>
 
-      <div class="row g-4">
+      <div class="row g-4 mb-4">
         <div class="col-md-4">
           <div class="card auslan-card h-100">
             <div class="card-body">
@@ -350,51 +364,151 @@
         </div>
       </div>
 
-      <div class="card mt-4">
-        <div class="card-body">
-          <h3 class="h5"><span aria-hidden="true">&#127968;</span> Common Household Signs to Learn</h3>
-          <p>Start with these everyday signs - look each one up on Signbank to see how to do it.</p>
-          <div class="row">
-            <div class="col-sm-6 col-lg-3">
-              <h4 class="h6 text-muted">Greetings</h4>
-              <ul class="list-unstyled">
-                <li class="house-rule">Hello / Hi</li>
-                <li class="house-rule">Thank you</li>
-                <li class="house-rule">Sorry</li>
-                <li class="house-rule">Please</li>
-                <li class="house-rule">Yes / No</li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <h4 class="h6 text-muted">Daily check-ins</h4>
-              <ul class="list-unstyled">
-                <li class="house-rule">Good morning</li>
-                <li class="house-rule">Good night</li>
-                <li class="house-rule">How are you?</li>
-                <li class="house-rule">I'm okay</li>
-                <li class="house-rule">Need help?</li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <h4 class="h6 text-muted">Around the house</h4>
-              <ul class="list-unstyled">
-                <li class="house-rule">Eat / Food</li>
-                <li class="house-rule">Drink / Water</li>
-                <li class="house-rule">Clean</li>
-                <li class="house-rule">Dog / Cat</li>
-                <li class="house-rule">Walk</li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <h4 class="h6 text-muted">Boundaries &amp; feelings</h4>
-              <ul class="list-unstyled">
-                <li class="house-rule">Wait</li>
-                <li class="house-rule">I need space</li>
-                <li class="house-rule">Happy / Sad</li>
-                <li class="house-rule">Understand?</li>
-                <li class="house-rule">Meeting</li>
-              </ul>
-            </div>
+      <h3 class="h5"><span aria-hidden="true">&#127968;</span> Common Household Signs to Learn</h3>
+      <p class="text-muted small">Each link opens Auslan Signbank in a new tab.</p>
+
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="sign-category">
+            <h4>Greetings &amp; Politeness</h4>
+            <ul class="list-unstyled mb-0">
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=hello" target="_blank" rel="noopener">Hello</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=goodbye" target="_blank" rel="noopener">Goodbye</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=thank+you" target="_blank" rel="noopener">Thank you</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=please" target="_blank" rel="noopener">Please</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=sorry" target="_blank" rel="noopener">Sorry</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=yes" target="_blank" rel="noopener">Yes</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=no" target="_blank" rel="noopener">No</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=welcome" target="_blank" rel="noopener">Welcome</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sign-category">
+            <h4>Daily Check-ins</h4>
+            <ul class="list-unstyled mb-0">
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=good+morning" target="_blank" rel="noopener">Good morning</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=good+night" target="_blank" rel="noopener">Good night</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=how" target="_blank" rel="noopener">How are you?</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=okay" target="_blank" rel="noopener">I'm okay</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=tired" target="_blank" rel="noopener">Tired</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=busy" target="_blank" rel="noopener">Busy</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=help" target="_blank" rel="noopener">Need help?</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=ready" target="_blank" rel="noopener">Ready</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sign-category">
+            <h4>Eating &amp; Drinking</h4>
+            <ul class="list-unstyled mb-0">
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=eat" target="_blank" rel="noopener">Eat</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=food" target="_blank" rel="noopener">Food</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=drink" target="_blank" rel="noopener">Drink</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=water" target="_blank" rel="noopener">Water</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=coffee" target="_blank" rel="noopener">Coffee</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=tea" target="_blank" rel="noopener">Tea</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=hungry" target="_blank" rel="noopener">Hungry</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=cook" target="_blank" rel="noopener">Cook</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sign-category">
+            <h4>Cleaning &amp; Home</h4>
+            <ul class="list-unstyled mb-0">
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=clean" target="_blank" rel="noopener">Clean</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=wash" target="_blank" rel="noopener">Wash</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=dishes" target="_blank" rel="noopener">Dishes</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=laundry" target="_blank" rel="noopener">Laundry</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=vacuum" target="_blank" rel="noopener">Vacuum</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=bedroom" target="_blank" rel="noopener">Bedroom</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=bathroom" target="_blank" rel="noopener">Bathroom</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=kitchen" target="_blank" rel="noopener">Kitchen</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sign-category">
+            <h4>Pets</h4>
+            <ul class="list-unstyled mb-0">
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=dog" target="_blank" rel="noopener">Dog</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=cat" target="_blank" rel="noopener">Cat</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=walk" target="_blank" rel="noopener">Walk</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=feed" target="_blank" rel="noopener">Feed</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=play" target="_blank" rel="noopener">Play</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=outside" target="_blank" rel="noopener">Outside</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=animal" target="_blank" rel="noopener">Animal</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=toy" target="_blank" rel="noopener">Toy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sign-category">
+            <h4>Feelings</h4>
+            <ul class="list-unstyled mb-0">
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=happy" target="_blank" rel="noopener">Happy</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=sad" target="_blank" rel="noopener">Sad</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=angry" target="_blank" rel="noopener">Angry</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=excited" target="_blank" rel="noopener">Excited</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=worried" target="_blank" rel="noopener">Worried</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=scared" target="_blank" rel="noopener">Scared</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=frustrated" target="_blank" rel="noopener">Frustrated</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=love" target="_blank" rel="noopener">Love</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sign-category">
+            <h4>Boundaries &amp; Asks</h4>
+            <ul class="list-unstyled mb-0">
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=wait" target="_blank" rel="noopener">Wait</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=stop" target="_blank" rel="noopener">Stop</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=space" target="_blank" rel="noopener">I need space</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=understand" target="_blank" rel="noopener">Understand?</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=repeat" target="_blank" rel="noopener">Repeat please</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=slow" target="_blank" rel="noopener">Slow down</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=quiet" target="_blank" rel="noopener">Quiet</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=finish" target="_blank" rel="noopener">Finished</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sign-category">
+            <h4>Time &amp; Meetings</h4>
+            <ul class="list-unstyled mb-0">
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=today" target="_blank" rel="noopener">Today</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=tomorrow" target="_blank" rel="noopener">Tomorrow</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=yesterday" target="_blank" rel="noopener">Yesterday</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=now" target="_blank" rel="noopener">Now</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=later" target="_blank" rel="noopener">Later</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=meeting" target="_blank" rel="noopener">Meeting</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=tuesday" target="_blank" rel="noopener">Tuesday</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=weekend" target="_blank" rel="noopener">Weekend</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sign-category">
+            <h4>Communication</h4>
+            <ul class="list-unstyled mb-0">
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=message" target="_blank" rel="noopener">Message</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=call" target="_blank" rel="noopener">Call</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=email" target="_blank" rel="noopener">Email</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=talk" target="_blank" rel="noopener">Talk</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=listen" target="_blank" rel="noopener">Listen</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=interpreter" target="_blank" rel="noopener">Interpreter</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=name" target="_blank" rel="noopener">Name</a></li>
+              <li><a class="sign-link" href="https://www.auslan.org.au/dictionary/search/?query=question" target="_blank" rel="noopener">Question</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -405,7 +519,7 @@
 
 <footer>
   <div class="container text-center">
-    <p class="mb-0">Zebra Jukebox - built with care for accessibility</p>
+    <p class="mb-0"><span aria-hidden="true">&#129427;</span> Zebra Jukebox - built with care for accessibility</p>
   </div>
 </footer>
 
