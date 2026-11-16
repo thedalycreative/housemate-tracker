@@ -14,12 +14,13 @@
 - **Cleaning roster** — four chores rotate automatically every Monday; browse past/future weeks, tick chores off and see 6-week streaks
 - **House calendar** — month view of inspections, handyman/tradie visits, bin nights, rent and house socials, with an add-event form
 - Demo data is generated relative to today, saved in `localStorage`, and can be reset from the footer
+- Light and dark themes with a toggle (remembers your choice, follows the system setting by default)
 - Accessible: skip link, live-region announcements, keyboard-friendly controls, responsive down to phones
 
 ## Tech stack
 
 - Vanilla JavaScript (no framework, no build)
-- Hand-written CSS with custom properties; Plus Jakarta Sans
+- Hand-written CSS with custom properties, Positivus-inspired design (lime + ink, outlined cards, offset shadows), Space Grotesk, light/dark toggle
 - `localStorage` persistence
 - Hosted on Vercel as a static site
 

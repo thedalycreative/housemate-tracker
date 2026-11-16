@@ -5,23 +5,23 @@
 
   var KEY = "housemate-tracker-v1";
   var PEOPLE = [
-    { id: "priya",  name: "Priya",  color: "#0f766e" },
-    { id: "marcus", name: "Marcus", color: "#f97316" },
-    { id: "jo",     name: "Jo",     color: "#7c3aed" },
-    { id: "sam",    name: "Sam",    color: "#2563eb" }
+    { id: "priya",  name: "Priya",  color: "#191A23" },
+    { id: "marcus", name: "Marcus", color: "#FF6B4A" },
+    { id: "jo",     name: "Jo",     color: "#7B61FF" },
+    { id: "sam",    name: "Sam",    color: "#1F8A70" }
   ];
   var CHORES = [
-    { t: "Kitchen & benches", s: "Wipe down, mop, empty dishrack", c: "#f97316" },
-    { t: "Bathroom",          s: "Shower, toilet, mirror, floor",  c: "#2563eb" },
-    { t: "Lounge & hallway",  s: "Vacuum, dust, tidy shoes",       c: "#7c3aed" },
-    { t: "Bins & recycling",  s: "Out Tuesday night, rinse yellow", c: "#0f766e" }
+    { t: "Kitchen & benches", s: "Wipe down, mop, empty dishrack", c: "#FF6B4A" },
+    { t: "Bathroom",          s: "Shower, toilet, mirror, floor",  c: "#7B61FF" },
+    { t: "Lounge & hallway",  s: "Vacuum, dust, tidy shoes",       c: "#FFD166" },
+    { t: "Bins & recycling",  s: "Out Tuesday night, rinse yellow", c: "#B9FF66" }
   ];
   var TYPES = {
-    inspection: { label: "Inspection",   bg: "#fee2e2", fg: "#991b1b" },
-    tradie:     { label: "Tradie visit", bg: "#ffedd5", fg: "#9a3412" },
-    bins:       { label: "Bin night",    bg: "#dcfce7", fg: "#166534" },
-    rent:       { label: "Rent / bills", bg: "#dbeafe", fg: "#1e40af" },
-    social:     { label: "House social", bg: "#f3e8ff", fg: "#6b21a8" }
+    inspection: { label: "Inspection",   bg: "#B9FF66", fg: "#191A23" },
+    tradie:     { label: "Tradie visit", bg: "#FFD166", fg: "#191A23" },
+    bins:       { label: "Bin night",    bg: "#E2E2E2", fg: "#191A23" },
+    rent:       { label: "Rent / bills", bg: "#191A23", fg: "#B9FF66" },
+    social:     { label: "House social", bg: "#C9B8FF", fg: "#191A23" }
   };
 
   // ---------- date helpers ----------
@@ -152,7 +152,7 @@
     fill("ov-chores", CHORES.map(function (c, i) {
       var p = assignee(i, w), ok = isDone(w, i);
       return h("li", {}, [av(p, true), h("span", { class: "grow" }, [h("strong", {}, p.name), " — " + c.t]),
-        h("span", { class: "pill", style: ok ? "background:#dcfce7;color:#166534" : "background:#fef3c7;color:#92400e" }, ok ? "Done" : "To do")]);
+        h("span", { class: "pill", style: ok ? "background:#B9FF66;color:#191A23" : "background:#F3F3F3;color:#191A23" }, ok ? "Done" : "To do")]);
     }));
 
     fill("ov-upcoming", upcoming.slice(0, 6).map(function (e) {
@@ -291,6 +291,15 @@
     document.getElementById("wk-next").onclick = function () { viewWeek++; renderRoster(); };
     document.getElementById("m-prev").onclick = function () { viewMonth = new Date(viewMonth.getFullYear(), viewMonth.getMonth() - 1, 1); renderCalendar(); };
     document.getElementById("m-next").onclick = function () { viewMonth = new Date(viewMonth.getFullYear(), viewMonth.getMonth() + 1, 1); renderCalendar(); };
+    var tt = document.getElementById("theme-toggle");
+    function syncToggle() { var dark = document.documentElement.getAttribute("data-theme") === "dark"; tt.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode"); tt.setAttribute("aria-pressed", String(dark)); }
+    tt.onclick = function () {
+      var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("ht-theme", next); } catch (e) {}
+      syncToggle(); announce(next === "dark" ? "Dark mode on" : "Light mode on");
+    };
+    syncToggle();
     document.getElementById("reset").onclick = function () { state = seed(); save(); renderBillForm(); renderAll(); announce("Demo data reset"); };
   });
 })();
